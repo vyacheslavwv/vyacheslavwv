@@ -107,17 +107,6 @@ Self-hosted VPN на **Xray core**, полностью боевой сетап:
 
 ---
 
-## Принципы
-
-- **Explanation-first.** Ни одна строка манифеста не попадает в кластер, пока я не могу объяснить, зачем она.
-- **`latest` — почти всегда антипаттерн.** Теги по SHA / ветке / semver, а не «то, что сейчас в реестре».
-- **Секреты не в git.** GitLab CI variables (Masked / Protected / File), Kubernetes `Secret`, ноль hardcoded паролей в YAML.
-- **Non-root в контейнерах**, минимальные capabilities, `imagePullSecrets` вместо `--insecure-registry`.
-- **Manual approval для prod-деплоя.** Автомат — до `build`. Кнопку жму осознанно.
-- **Проверяй руками.** ZDD доказывается `curl`-циклом, не строчкой «у нас Rolling Update». Отказоустойчивость БД — `kubectl delete pod` под нагрузкой, а не обещанием PVC.
-
----
-
 ## Мои проектики
 
 | Проект | Что внутри |
