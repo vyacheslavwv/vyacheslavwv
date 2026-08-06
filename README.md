@@ -86,7 +86,7 @@
   ```
 - Траблшутил связку FastAPI ↔ Postgres в кластере: сборка `DATABASE_URL` вида `postgresql+asyncpg://...` через переменные, разбирался с asyncpg vs psycopg2, CoreDNS-именами сервисов.
 
-### Сети и VPN (advanced)
+### Сети и VPN
 Self-hosted VPN на **Xray core**, полностью боевой сетап:
 - протоколы: **VLESS**, **Reality**, **XTLS-Vision**;
 - транспорты: **gRPC**, **TCP**;
