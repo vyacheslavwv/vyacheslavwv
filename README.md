@@ -111,7 +111,7 @@ Self-hosted VPN на **Xray core**, полностью боевой сетап:
 
 | Проект | Что внутри |
 |---|---|
-| **[Hybrid Lab](./)** — full-cycle DevOps demo | GitLab CI (Kaniko) → private registry → K3s (Traefik + cert-manager + PVC + probes + limits) → HTTPS-домен. Frontend (React/TS) + Backend (FastAPI) + PostgreSQL. Прошёл 4 краш-теста: ZDD, kill app-pod, kill DB-pod, `wrk -c400` стресс. |
+| **[Hybrid Lab](https://github.com/vyacheslavwv/HybridLab/blob/main/README.md)** — full-cycle DevOps demo | GitLab CI (Kaniko) → private registry → K3s (Traefik + cert-manager + PVC + probes + limits) → HTTPS-домен. Frontend (React/TS) + Backend (FastAPI) + PostgreSQL. Прошёл 4 краш-теста: ZDD, kill app-pod, kill DB-pod, `wrk -c400` стресс. |
 | **Self-hosted VPN** *(private)* | Xray core: VLESS + Reality + XTLS-Vision, gRPC/TCP, 3x-ui, remote admin с телефона. |
 | **Monitoring Stack** *(work in progress)* | Prometheus + Grafana + Alertmanager поверх K3s, node/app exporters, алерты по CPU/памяти/пробам. |
 | **Terraform Lab** *(planned)* | Yandex Cloud + Terraform: VPC, VM, security groups, ClusterIssuer через IaC. |
