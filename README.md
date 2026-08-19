@@ -55,8 +55,8 @@
 ## Что делаю руками
 
 ### CI/CD и сборка артефактов
-- Пишу `.gitlab-ci.yml` со стадиями **lint → test → build → deploy**, с кэшем pip/npm и параллельными job'ами по фронту и бэку.
-- Собираю Docker-образы через **Kaniko** — daemonless, в user-space, без `docker.sock` и `privileged: true`. Пайплайн стал чисто push-based, без единого SSH-ключа.
+- `.gitlab-ci.yml` со стадиями **lint → test → build → deploy**, с кэшем pip/npm и параллельными job'ами по фронту и бэку.
+- Docker-образы через **Kaniko** — daemonless, в user-space, без `docker.sock` и `privileged: true`. Пайплайн стал чисто push-based, без единого SSH-ключа.
 - Публикую в приватный GitLab Container Registry, стягиваю в кластер через `imagePullSecrets` (`docker-registry` секрет).
 - **GitLab Runner** живёт **внутри самого кластера** — в отдельном namespace. 
 - Деплой в prod. Никаких сюрпризов из feature-веток.
@@ -89,7 +89,7 @@ Self-hosted VPN на **Xray core**, полностью боевой сетап:
 - Базовый стек в единой bridge-сети docker-compose/кубера: **Prometheus**, **Grafana**, **Node Exporter** (хост/железо), **cAdvisor** (контейнеры).
 - **pull-модель**: `prometheus.yml`, `scrape_interval`, таргеты.
 - **TSDB**: горячие сэмплы в RAM, **WAL** для защиты от потери при рестарте, упаковка в chunks.
-- Пишу **PromQL**: агрегации `sum without(...)`, матчеры с regex и `!=`
+- **PromQL**: агрегации `sum without(...)`, матчеры с regex и `!=`
 - **архитектурные лимиты**: почему **high cardinality** (`user_id` в лейблах) экспоненциально раздувает индекс и роняет Prometheus по OOM; где заканчивается один инстанс и начинается **remote write** (напр. в VictoriaMetrics).
 
 ### Linux и облака
@@ -98,7 +98,7 @@ Self-hosted VPN на **Xray core**, полностью боевой сетап:
 
 ---
 
-## Мои проектики
+## Проекты
 
 | Проект | Что внутри |
 |---|---|
@@ -118,7 +118,8 @@ Self-hosted VPN на **Xray core**, полностью боевой сетап:
 
 ## Контакт
 
-Открыт к небольшим проектам и техническим задачам по DevOps / инфраструктуре.
+Открыт к проектам и техническим задачам по DevOps / инфраструктуре.
+
 Telegram → **[@knshnxxx](https://t.me/knshnxxx)**
 
-Почта → vyacheslav.hmm@gmail.com
+Email → **vyacheslav.hmm@gmail.com**
